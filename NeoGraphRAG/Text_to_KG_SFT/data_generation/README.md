@@ -142,10 +142,6 @@ python generate_text_from_kg.py --source wikidata --model deepseek-ai/DeepSeek-V
 python generate_text_from_kg.py --source wikidata --model deepseek-ai/DeepSeek-V3 --llm_provider deepseek --postfix "_triples.txt" --num_threads 10 --skip_existing
 ```
 
-# partition_files.py
-```bash
-python partition_files.py --source wikidata --num_partitions 3
-```
 # rule_based_triple_filtering.py
 ```bash
 python rule_based_triple_filtering.py --source wikidata

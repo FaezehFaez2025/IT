@@ -40,26 +40,6 @@ The following table lists the supported QIDs and their corresponding entity type
 | Q7397     | Software (computer programs)                                |
 | Q386724   | Website (online resources)                                  |
 
-# wikidata_sampler.py
-
-## Description
-This script allows you to explore a subset of Wikidata in RDF format. It loads an RDF graph from a file, selects a random node (subject), and prints its URI, label (if available), and the count of 
-predicates associated with it. The script also retrieves and displays neighboring nodes, both outgoing and incoming, along with their labels and directions (e.g., "→" for outgoing, "←" for 
-incoming).
-
-The RDF file can be generated using the `wikidata_subset_downloader.py` script, which downloads a subset of Wikidata entities in RDF format.
-
-## How to Run
-
-1. Use the `wikidata_subset_downloader.py` script to download the RDF file containing the Wikidata subset you wish to explore.
-2. Run the `wikidata_sampler.py` script with the following command:
-
-```bash
-python wikidata_sampler.py wikidata_Q12136_2025-02-18/Q12136_subset.rdf
-```
-
-The path `wikidata_Q12136_2025-02-18/Q12136_subset.rdf` can be replaced with any other desired RDF file.
-
 # knowledge_base_triple_extractor.py
 
 This Python script extracts triples (subject, predicate, object) from **Wikidata** or **YAGO** knowledge bases. It retrieves n-hop neighbors of a given entity and includes an optional GUI to select 

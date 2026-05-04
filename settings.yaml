@@ -1,0 +1,19 @@
+graphrag_llm:
+  model: gpt-4o-mini
+
+datasets:
+  rebel:
+    folder: rebel_dataset
+    partitions:
+      train: en_train.jsonl
+      test: en_test.jsonl
+      val: en_val.jsonl
+  controlled_extraction:
+    folder: controlled_extraction_dataset
+    partitions:
+      test: en_test.jsonl
+
+current_dataset:
+  name: controlled_extraction
+  partition: test  # Options: train, test, val
+

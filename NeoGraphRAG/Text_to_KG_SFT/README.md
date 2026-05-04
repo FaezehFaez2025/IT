@@ -124,11 +124,6 @@ python build_llama_factory_dataset.py --partition test
 python finetune_qwen2.5.py --num_params 7B --num_epochs 10
 ```
 
-# test_original_qwen25.py
-```bash
-python test_original_qwen25.py --num_params 1.5B --dataset_path data/test/dataset.jsonl
-```
-
 # prepare_baseline_data.py
 
 ## Description

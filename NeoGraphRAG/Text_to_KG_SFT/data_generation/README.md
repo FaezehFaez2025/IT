@@ -17,10 +17,6 @@ and save some of the triples.
 ```bash
 python knowledge_base_triple_extractor.py --entity Q12345 --hops 2 --save
 ```
-#### Query YAGO:
-```bash
-python knowledge_base_triple_extractor.py --entity ACF_Fiorentina --hops 2 --source yago --save
-```
 #### TBC
 ```bash
 python knowledge_base_triple_extractor.py --multiple_samples --num_samples 5000 --max_hops 2 --source wikidata --ratio 0.2

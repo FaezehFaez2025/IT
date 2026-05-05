@@ -25,8 +25,6 @@ pip install SPARQLWrapper tqdm
 
 ## Usage
 
-Runs many subgraph samples in one invocation: parallel workers, bounded hops, optional controlled fan-out, and optional resume.
-
 ### Arguments
 
 - `--multiple_samples` — Multi-sample mode: generate many subgraph samples instead of querying a single `--entity`.

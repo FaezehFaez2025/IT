@@ -20,7 +20,7 @@ Install Python packages:
 
 ```bash
 pip install --upgrade pip
-pip install SPARQLWrapper tqdm openai python-dotenv
+pip install SPARQLWrapper
 ```
 
 This Python script extracts triples (subject, predicate, object) from **Wikidata** or **YAGO** knowledge bases. It retrieves n-hop neighbors of a given entity and includes an optional GUI to select 

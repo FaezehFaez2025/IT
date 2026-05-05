@@ -1,4 +1,6 @@
-# knowledge_base_triple_extractor.py
+# Knowledge Base Subgraph Extractor
+
+This script extracts subgraphs from a knowledge base (e.g., Wikidata) by traversing multi-hop neighborhoods around seed entities. It produces (subject, predicate, object) triples that form the subgraph surrounding each entity.
 
 ## Setup
 

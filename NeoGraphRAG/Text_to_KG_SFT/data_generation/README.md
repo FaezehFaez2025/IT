@@ -29,10 +29,6 @@ python knowledge_base_triple_extractor.py --multiple_samples --num_samples 10 --
 ```bash
 python knowledge_base_triple_extractor.py --multiple_samples --num_samples 10 --max_hops 4 --parallel --num_threads 2 --controlled_extraction --num_neighbors_per_hop 3 --source wikidata
 ```
-#### Controlled Extraction with Entity Type Constraints (TBC)
-```bash
-python knowledge_base_triple_extractor.py --multiple_samples --num_samples 2 --max_hops 4 --parallel --num_threads 2 --controlled_extraction --num_neighbors_per_hop 5 --source wikidata --type_qid Q5
-```
 #### Resume Generation
 ```bash
 python knowledge_base_triple_extractor.py --multiple_samples --num_samples 200 --max_hops 4 --parallel --num_threads 5 --controlled_extraction --num_neighbors_per_hop 6 --source wikidata --type_qid Q5 --resume_generation

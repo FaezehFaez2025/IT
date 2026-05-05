@@ -21,9 +21,6 @@ pip install --upgrade pip
 pip install SPARQLWrapper tqdm
 ```
 
-This Python script extracts triples (subject, predicate, object) from **Wikidata** or **YAGO** knowledge bases. It retrieves n-hop neighbors of a given entity and includes an optional GUI to select 
-and save some of the triples.
-
 ## Usage
 
 ### Command-Line Arguments

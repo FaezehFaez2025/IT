@@ -2,8 +2,6 @@
 
 ## Setup
 
-**InvertiTune** text-to-KG SFT: Python 3.9+, network, then conda/pip below (`python3-tk` on Linux for `--save`).
-
 Create a conda environment:
 
 ```bash

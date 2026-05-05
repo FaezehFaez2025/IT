@@ -1,7 +1,5 @@
 # NeoGraphRAG
 
-*Description will be added in the future.*
-
 ## Getting Started
 
 To use NeoGraphRAG, follow these steps to initialize and set up the repository.

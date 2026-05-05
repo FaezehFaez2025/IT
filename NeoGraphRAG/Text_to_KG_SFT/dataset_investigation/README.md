@@ -40,33 +40,6 @@ python dataset_analyzer.py --dataset CE3000 --partition test --report_type token
 
 ![Token Count Distribution Example](./token_count_distribution_CE3000_test.png)
 
-## Named Entity Distribution Report
-
-To generate a named entity distribution report, run:
-
-```bash
-python dataset_analyzer.py --dataset DATASET_NAME --partition PARTITION --report_type named_entity_distribution
-```
-
-### Examples:
-
-```bash
-python dataset_analyzer.py --dataset CE3000 --partition test --report_type named_entity_distribution
-```
-
-This report generates multiple visualizations:
-
-**Main Distribution:**
-![Named Entity Distribution](./named_entity_distribution_CE3000_test.png)
-
-**Entity Density Analysis:**
-![Entity Density per Token](./named_entity_density_per_token_CE3000_test.png)
-![Entity Density per Sentence](./named_entity_density_per_sentence_CE3000_test.png)
-
-**Entity Type Analysis:**
-![Entity Type Counts](./entity_types_counts_CE3000_test.png)
-![Entity Type Proportions](./entity_types_proportions_CE3000_test.png)
-
 ## Cross-Dataset Evaluation Report
 
 To generate a cross-dataset evaluation report, run:

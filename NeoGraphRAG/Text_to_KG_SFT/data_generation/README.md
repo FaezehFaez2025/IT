@@ -4,12 +4,23 @@
 
 Scripts in this folder support the **InvertiTune** text-to-KG SFT data pipeline. Use **Python 3.9+**, allow network access (Wikidata SPARQL and optional LLM APIs), and install dependencies below. For the optional `--save` GUI on Linux, you may need `sudo apt install python3-tk`.
 
+Create a conda environment:
+
 ```bash
-cd NeoGraphRAG/Text_to_KG_SFT/data_generation
-python -m venv .venv-invertitune-data
-source .venv-invertitune-data/bin/activate
+conda create -n invertitune-data python=3.11 -y
+```
+
+Activate it:
+
+```bash
+conda activate invertitune-data
+```
+
+Install Python packages:
+
+```bash
 pip install --upgrade pip
-pip install SPARQLWrapper
+pip install SPARQLWrapper tqdm openai python-dotenv
 ```
 
 This Python script extracts triples (subject, predicate, object) from **Wikidata** or **YAGO** knowledge bases. It retrieves n-hop neighbors of a given entity and includes an optional GUI to select 

@@ -1,8 +1,8 @@
 # knowledge_base_triple_extractor.py
 
-## Requirements (InvertiTune data generation)
+## Setup
 
-Scripts in this folder support the **InvertiTune** text-to-KG SFT data pipeline. Use **Python 3.9+**, allow network access (Wikidata SPARQL and optional LLM APIs), and install dependencies below. For the optional `--save` GUI on Linux, you may need `sudo apt install python3-tk`.
+**InvertiTune** text-to-KG SFT: Python 3.9+, network, then conda/pip below (`python3-tk` on Linux for `--save`).
 
 Create a conda environment:
 

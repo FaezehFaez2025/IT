@@ -25,18 +25,27 @@ pip install SPARQLWrapper tqdm
 
 ## Usage
 
-### Command-Line Arguments
-- `--entity`: The entity ID to query (e.g., `Q12345` for Wikidata or `ACF_Fiorentina` for YAGO).
-- `--hops`: The number of hops (default: 1).
-- `--save`: Enable the GUI to select and save some of the triples.
-- `--source`: The knowledge base to query (`wikidata` or `yago`). Default is `wikidata`.
+Runs many subgraph samples in one invocation: parallel workers, bounded hops, optional controlled fan-out, and optional resume.
 
-### Example Commands
+### Arguments
 
-#### Resume Generation
+- `--multiple_samples` — Multi-sample mode: generate many subgraph samples instead of querying a single `--entity`.
+- `--num_samples` — Target count of samples (here, 200).
+- `--max_hops` — Maximum traversal depth from each seed (here, 4 hops).
+- `--parallel` — Distribute work across threads; use with `--num_threads`.
+- `--num_threads` — Worker thread count when `--parallel` is set (here, 5).
+- `--controlled_extraction` — Use controlled expansion: validate/limit neighbors per hop instead of unconstrained growth.
+- `--num_neighbors_per_hop` — In controlled mode, how many neighbors to take at each hop (here, 6).
+- `--source` — Knowledge base backend (`wikidata` or `yago`).
+- `--type_qid` — Wikidata type Q-ID restricting eligible entities (e.g. `Q5` is **human**).
+- `--resume_generation` — Only generate samples that are still missing output; skip entities that already have saved files.
+
+### Example
+
 ```bash
 python knowledge_base_triple_extractor.py --multiple_samples --num_samples 200 --max_hops 4 --parallel --num_threads 5 --controlled_extraction --num_neighbors_per_hop 6 --source wikidata --type_qid Q5 --resume_generation
-``` 
+```
+
 # generate_text_from_kg.py
 ```bash
 python generate_text_from_kg.py --source wikidata --model deepseek-ai/DeepSeek-V3 --llm_provider deepseek --postfix "_triples.txt"

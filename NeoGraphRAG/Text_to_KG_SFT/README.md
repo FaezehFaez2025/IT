@@ -119,11 +119,6 @@ python build_llama_factory_dataset.py --partition test
 ```
 - `--partition`: Specifies which data partition to process (`train` or `test`).
 
-# finetune_qwen2.5.py
-```bash
-python finetune_qwen2.5.py --num_params 7B --num_epochs 10
-```
-
 # prune_prediction_triples.py
 
 ## Description

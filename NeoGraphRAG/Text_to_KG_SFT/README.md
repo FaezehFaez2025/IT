@@ -124,20 +124,6 @@ python build_llama_factory_dataset.py --partition test
 python finetune_qwen2.5.py --num_params 7B --num_epochs 10
 ```
 
-# prepare_baseline_data.py
-
-## Description
-This script prepares data for baseline models by converting the LLaMA-Factory format (T2G_test.json) into a JSONL format that is compatible with the baseline models. It:
-1. Reads the T2G_test.json file from the LLaMA-Factory/data directory.
-2. Converts each entry into a structured format with docid, text, and triples fields.
-3. Saves the processed data as en_test.jsonl in the datasets/controlled_extraction_dataset directory (two levels up from the current path).
-4. This converted data is then suitable for use with the process_dataset.py script located two directories up from this path.
-
-## Command to Run
-```bash
-python prepare_baseline_data.py
-```
-
 # prune_prediction_triples.py
 
 ## Description

@@ -33,10 +33,6 @@ pip install SPARQLWrapper tqdm
 
 ### Example Commands
 
-#### Query Wikidata
-```bash
-python knowledge_base_triple_extractor.py --entity Q12345 --hops 2 --save
-```
 #### Parallel Extraction (TBC)
 ```bash
 python knowledge_base_triple_extractor.py --multiple_samples --num_samples 10 --max_hops 2 --source wikidata --ratio 0.3 --parallel --num_threads 4

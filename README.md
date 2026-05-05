@@ -48,24 +48,3 @@ In the `.env` file located in the root of the repository, replace the placeholde
 ```env
 OPENAI_API_KEY=your_openai_api_key_here
 ```
-### Initializing GraphRAG
-
-To set up GraphRAG, execute the initialization script:
-
-   ```bash
-   python initialize_graphrag.py
-   ```
-
-## Indexing Input Text with LightRAG and GraphRAG
-
-To index your input text using **LightRAG** and **GraphRAG**, execute the following command. Make sure to replace the placeholder text within the quotes with your own text:
-
-```bash
-python perform_indexing.py --text "YOUR_INPUT_TEXT_HERE"
-```
-
-**Output Locations:**
-
-- **LightRAG:** The constructed graph will be saved in the `LightRAG/output` directory.
-- **GraphRAG:** The indexed results will be stored in `GraphRAG-Next/ragtest/output/artifacts`.
-

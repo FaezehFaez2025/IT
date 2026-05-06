@@ -27,7 +27,7 @@ pip install SPARQLWrapper tqdm
 
 ### Arguments
 
-- `--multiple_samples` — Extract `--num_samples` subgraphs, each rooted at a different randomly selected KB entity.
+- `--multiple_samples` — Extract `--num_samples` subgraphs, each rooted at a different randomly selected entity.
 - `--num_samples` — Target count of samples (here, 200).
 - `--max_hops` — Maximum traversal depth from each seed.
 - `--parallel` — Distribute work across threads; use with `--num_threads`.

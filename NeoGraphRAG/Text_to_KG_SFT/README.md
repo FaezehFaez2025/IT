@@ -67,18 +67,6 @@ python prepare_data.py --data_folder ./data_generation/data --source wikidata --
 ```
 - `--num_samples`: Number of samples to randomly select from the dataset. If not specified, processes all available samples. Useful for testing or development with smaller datasets.
 
-### Processing KELM dataset
-```bash
-python prepare_data.py --source kelm_sub
-```
-- For KELM dataset, the script will look for data in `./baselines/PiVe/datasets/kelm_sub` directory.
-
-### Processing WebNLG20 dataset
-```bash
-python prepare_data.py --source webnlg20
-```
-- For WebNLG20 dataset, the script will look for data in `./baselines/PiVe/datasets/webnlg20` directory.
-
 # build_llama_factory_dataset.py
 
 ## Description

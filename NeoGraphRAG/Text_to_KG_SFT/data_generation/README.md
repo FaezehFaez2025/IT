@@ -44,7 +44,9 @@ PYTHONNOUSERSITE=1 python -m pip install SPARQLWrapper tqdm openai python-dotenv
 python knowledge_base_triple_extractor.py --multiple_samples --num_samples 200 --max_hops 4 --parallel --num_threads 5 --controlled_extraction --num_neighbors_per_hop 6 --source wikidata --type_qid Q5 --resume_generation
 ```
 
-# generate_text_from_kg.py
+# Text Description Generator for Extracted Knowledge Graphs
+
+This script generates natural language text descriptions for extracted knowledge graphs. Given triples (subject, predicate, object), it uses an LLM to produce readable textual summaries suitable for training and evaluation.
 
 - `--model` — Model to use (e.g. `gpt-3.5-turbo` or `deepseek-ai/DeepSeek-V3`).
 - `--llm_provider` — LLM provider to use: `chatgpt` or `deepseek`.

@@ -57,10 +57,6 @@ python generate_text_from_kg.py --source wikidata --model gpt-3.5-turbo --llm_pr
 python generate_text_from_kg.py --source wikidata --model deepseek-ai/DeepSeek-V3 --llm_provider deepseek --postfix "_triples.txt" --num_threads 10 --skip_existing
 ```
 
-# rule_based_triple_filtering.py
-```bash
-python rule_based_triple_filtering.py --source wikidata
-```
 # entity_triple_viewer.py
 
 This script retrieves all relationships where the specified entity is the subject. It queries Wikidata to extract and display all triples associated with a given entity ID.

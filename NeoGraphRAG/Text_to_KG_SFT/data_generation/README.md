@@ -36,7 +36,7 @@ PYTHONNOUSERSITE=1 python -m pip install SPARQLWrapper tqdm openai python-dotenv
 - `--num_neighbors_per_hop` — How many neighbors to take at each hop.
 - `--source` — Knowledge base backend.
 - `--type_qid` — Wikidata type Q-ID restricting eligible entities (e.g. `Q5` is **human**).
-- `--resume_generation` — Only generate samples that are still missing output; skip entities that already have saved files.
+- `--resume_generation` — Resume an interrupted run by skipping entities that already have output files.
 
 ### Example
 

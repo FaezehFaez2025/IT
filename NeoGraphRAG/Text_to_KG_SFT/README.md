@@ -56,11 +56,6 @@ python prepare_data.py --data_folder ./data_generation/data --source wikidata --
 - `--data_folder`: Path to the data folder (default: `./data_generation/data`).
 - `--source`: Data source (`wikidata`, `yago`, `kelm_sub`, or `webnlg20`, default: `wikidata`).
 - `--train_ratio`: Ratio of data to use for training (default: `0.8`).
-### with triples_postfix indicated (TBC)
-```bash
-python prepare_data.py --data_folder ./data_generation/data --source wikidata --train_ratio 0.8 --triples_postfix "_triples.txt"
-```
-
 ### with specific number of samples
 ```bash
 python prepare_data.py --data_folder ./data_generation/data --source wikidata --train_ratio 0.8 --triples_postfix "_triples.txt" --num_samples 10

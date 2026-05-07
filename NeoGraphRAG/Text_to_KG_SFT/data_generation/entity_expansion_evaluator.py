@@ -122,11 +122,9 @@ def evaluate_entity_expansion_worthiness(entity_id, entity_name, triples, model,
     Returns True if entity should NOT be expanded (all triples are non-informative).
     Also returns the informative triples found.
     """
-    # Define the relative path to the .env file
-    dotenv_path = os.path.join(os.path.dirname(__file__), "../../../.env")
+    dotenv_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".env"))
     load_dotenv(dotenv_path)
 
-    # Get the API key from the .env file
     if llm_provider == "deepseek":
         api_key = os.getenv("NEBIUS_API_KEY")
         base_url = "https://api.studio.nebius.com/v1/"

@@ -57,18 +57,6 @@ python generate_text_from_kg.py --source wikidata --model gpt-3.5-turbo --llm_pr
 python generate_text_from_kg.py --source wikidata --model deepseek-ai/DeepSeek-V3 --llm_provider deepseek --postfix "_triples.txt" --num_threads 10 --skip_existing
 ```
 
-# entity_triple_viewer.py
-
-This script retrieves all relationships where the specified entity is the subject. It queries Wikidata to extract and display all triples associated with a given entity ID.
-
-## Usage
-
-```bash
-python entity_triple_viewer.py Q6581097
-```
-
-Replace `Q6581097` with any Wikidata entity ID you want to explore.
-
 # entity_expansion_evaluator.py
 
 Evaluates if a Wikidata entity is worth expanding based on triple informativeness. First applies rule-based filtering, then uses LLM prompting on the remaining triples to determine if all are non-informative or if any informative triples exist.

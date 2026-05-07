@@ -28,7 +28,7 @@ PYTHONNOUSERSITE=1 python -m pip install SPARQLWrapper tqdm openai python-dotenv
 ### Arguments
 
 - `--multiple_samples` — Extract `--num_samples` subgraphs, each rooted at a different randomly selected entity.
-- `--num_samples` — Target count of samples (here, 200).
+- `--num_samples` — Target count of samples.
 - `--max_hops` — Maximum traversal depth from each seed.
 - `--parallel` — Distribute work across threads; use with `--num_threads`.
 - `--num_threads` — Worker thread count when `--parallel` is set.

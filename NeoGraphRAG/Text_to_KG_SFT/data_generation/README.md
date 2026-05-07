@@ -32,7 +32,7 @@ PYTHONNOUSERSITE=1 python -m pip install SPARQLWrapper tqdm openai python-dotenv
 - `--max_hops` — Maximum traversal depth from each seed.
 - `--parallel` — Distribute work across threads; use with `--num_threads`.
 - `--num_threads` — Worker thread count when `--parallel` is set.
-- `--controlled_extraction` — Expand each seed’s neighborhood with inline filtering at every step (blacklist, rules, subject–predicate uniqueness); does not postpone filtering to later stages.
+- `--controlled_extraction` — Expand each seed’s neighborhood with inline filtering at every step; does not postpone filtering to later stages.
 - `--num_neighbors_per_hop` — In controlled mode, how many neighbors to take at each hop (here, 6).
 - `--source` — Knowledge base backend.
 - `--type_qid` — Wikidata type Q-ID restricting eligible entities (e.g. `Q5` is **human**).

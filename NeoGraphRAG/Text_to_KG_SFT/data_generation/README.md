@@ -36,7 +36,15 @@ PYTHONNOUSERSITE=1 python -m pip install SPARQLWrapper tqdm openai python-dotenv
 - `--num_neighbors_per_hop` — How many neighbors to take at each hop.
 - `--source` — Knowledge base backend.
 - `--resume_generation` — Resume an interrupted run by skipping entities that already have output files.
-- `--type_qid` — Category from which seed entities are randomly sampled, specified as a Wikidata QID (e.g. `Q5` for human).
+- `--type_qid` — Category from which seed entities are randomly sampled, specified as a Wikidata QID. A few examples:
+
+  | QID | Entity Type |
+  |-----|-------------|
+  | Q5 | Human |
+  | Q515 | City |
+  | Q11424 | Film |
+  | Q3918 | University |
+  | Q16521 | Taxon |
 
 ### Example
 

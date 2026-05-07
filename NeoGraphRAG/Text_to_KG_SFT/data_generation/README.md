@@ -19,8 +19,8 @@ conda activate invertitune-data
 Install Python packages:
 
 ```bash
-pip install --upgrade pip
-pip install SPARQLWrapper tqdm openai
+python -m pip install --upgrade pip
+PYTHONNOUSERSITE=1 python -m pip install SPARQLWrapper tqdm openai
 ```
 
 ## Usage

@@ -20,7 +20,7 @@ Install Python packages:
 
 ```bash
 pip install --upgrade pip
-pip install SPARQLWrapper tqdm
+pip install SPARQLWrapper tqdm openai python-dotenv
 ```
 
 ## Usage

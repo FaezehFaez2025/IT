@@ -48,11 +48,11 @@ python knowledge_base_triple_extractor.py --multiple_samples --num_samples 200 -
 
 This script generates natural language text descriptions for extracted knowledge graphs. 
 
-- `--model` — Model to use (e.g. `gpt-3.5-turbo` or `deepseek-ai/DeepSeek-V3`).
+- `--model` — Model to use (e.g. `gpt-3.5-turbo` or `deepseek-ai/DeepSeek-V3.2`).
 - `--llm_provider` — LLM provider to use: `chatgpt` or `deepseek`.
 
 ```bash
-python generate_text_from_kg.py --model deepseek-ai/DeepSeek-V3 --llm_provider deepseek --postfix "_triples.txt" --num_threads 10 --skip_existing
+python generate_text_from_kg.py --model deepseek-ai/DeepSeek-V3.2 --llm_provider deepseek --postfix "_triples.txt" --num_threads 2 --skip_existing
 ```
 
 # Entity Expansion Blacklist Curation

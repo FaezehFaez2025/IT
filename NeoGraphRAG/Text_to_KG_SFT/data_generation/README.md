@@ -59,7 +59,7 @@ python generate_text_from_kg.py --source wikidata --model deepseek-ai/DeepSeek-V
 
 # Entity Expansion Blacklist Curation
 
-Some entities in a knowledge graph are not worth expanding during traversal. Their outgoing connections tend to be generic and add little useful context. This script identifies those entities in a setup step that runs once before graph traversal begins. It collects candidate entities, looks at their outgoing triples, filters out obvious noise using simple rules, and then asks an LLM to decide whether the remaining connections are informative. Entities deemed uninformative are saved to a blacklist so they are not expanded during graph traversal.
+Some entities in a knowledge graph are not worth expanding during traversal. Their outgoing connections tend to be generic and add little useful context. This script evaluates a single entity at a time. It fetches the entity's outgoing triples, applies rule-based filtering to remove obvious noise, and then asks an LLM to decide whether the remaining triples are informative. Entities where all triples are deemed uninformative are added to a blacklist so they are not expanded during graph traversal.
 
 ```bash
 python entity_expansion_evaluator.py Q5 --model gpt-4o --batch_size 1

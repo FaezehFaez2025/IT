@@ -46,7 +46,7 @@ python knowledge_base_triple_extractor.py --multiple_samples --num_samples 200 -
 
 # Text Description Generator for Extracted Knowledge Graphs
 
-This script generates natural language text descriptions for extracted knowledge graphs. Given triples (subject, predicate, object), it uses an LLM to produce readable textual summaries suitable for training and evaluation.
+This script generates natural language text descriptions for extracted knowledge graphs. 
 
 - `--model` — Model to use (e.g. `gpt-3.5-turbo` or `deepseek-ai/DeepSeek-V3`).
 - `--llm_provider` — LLM provider to use: `chatgpt` or `deepseek`.

@@ -35,8 +35,8 @@ PYTHONNOUSERSITE=1 python -m pip install SPARQLWrapper tqdm openai python-dotenv
 - `--controlled_extraction` — Expand each seed’s neighborhood with inline filtering at every step; does not postpone filtering to later stages.
 - `--num_neighbors_per_hop` — How many neighbors to take at each hop.
 - `--source` — Knowledge base backend.
-- `--type_qid` — Category from which seed entities are randomly sampled, specified as a Wikidata QID (e.g. `Q5` for human).
 - `--resume_generation` — Resume an interrupted run by skipping entities that already have output files.
+- `--type_qid` — Category from which seed entities are randomly sampled, specified as a Wikidata QID (e.g. `Q5` for human).
 
 ### Example
 

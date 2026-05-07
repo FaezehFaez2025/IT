@@ -50,9 +50,6 @@ This script prepares training and testing datasets for fine-tuning a model. It:
 4. Ensures non-ASCII characters (e.g., `ß`) are preserved in `dataset.jsonl`.
 
 ## Command to Run
-```bash
-python prepare_data.py --data_folder ./data_generation/data --source wikidata --train_ratio 0.8
-```
 - `--data_folder`: Path to the data folder (default: `./data_generation/data`).
 - `--source`: Data source (`wikidata`, `yago`, `kelm_sub`, or `webnlg20`, default: `wikidata`).
 - `--train_ratio`: Ratio of data to use for training (default: `0.8`).

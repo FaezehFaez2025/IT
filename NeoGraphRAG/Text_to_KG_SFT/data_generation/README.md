@@ -57,9 +57,9 @@ python generate_text_from_kg.py --source wikidata --model gpt-3.5-turbo --llm_pr
 python generate_text_from_kg.py --source wikidata --model deepseek-ai/DeepSeek-V3 --llm_provider deepseek --postfix "_triples.txt" --num_threads 10 --skip_existing
 ```
 
-# entity_expansion_evaluator.py
+# Entity Expansion Blacklist Curation
 
-Evaluates if a Wikidata entity is worth expanding based on triple informativeness. First applies rule-based filtering, then uses LLM prompting on the remaining triples to determine if all are non-informative or if any informative triples exist.
+LLM-based evaluator (φ_LLM) used in the one-time preprocessing step to build the entity expansion blacklist **B**. For a candidate entity, it retrieves all outgoing triples, applies rule-based pre-filtering, then prompts an LLM to judge whether the remaining triples are all uninformative. Entities judged uninformative are added to **B** and skipped during graph traversal.
 
 ```bash
 python entity_expansion_evaluator.py Q5 --model gpt-4o --batch_size 1

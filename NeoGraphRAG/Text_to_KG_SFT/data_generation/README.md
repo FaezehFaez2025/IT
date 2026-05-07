@@ -44,7 +44,7 @@ PYTHONNOUSERSITE=1 python -m pip install SPARQLWrapper tqdm openai python-dotenv
   | Q515 | City |
   | Q11424 | Film |
   | Q3918 | University |
-  | Q16521 | Taxon |
+  | Q8502 | Mountain |
 
 ### Example
 

@@ -1,3 +1,15 @@
+# Data Generation Pipeline
+
+The data generation pipeline produces paired (text, KG) data by inverting the usual Text2KG process. Rather than extracting knowledge graphs from text, it first extracts high-quality subgraphs from a large knowledge base (e.g., Wikidata) using a controlled graph traversal with inline noise filtering, and then uses an LLM to generate a natural language description for each subgraph. This produces reliable pairs suitable for supervised fine-tuning. Before extraction begins, a one-time setup step curates an entity expansion blacklist to prevent uninformative entities from being expanded during traversal.
+
+## Table of Contents
+
+- [Knowledge Base Subgraph Extractor](#knowledge-base-subgraph-extractor)
+- [Text Description Generator for Extracted Knowledge Graphs](#text-description-generator-for-extracted-knowledge-graphs)
+- [Entity Expansion Blacklist Curation](#entity-expansion-blacklist-curation)
+
+---
+
 # Knowledge Base Subgraph Extractor
 
 This script extracts subgraphs from a knowledge base (e.g., Wikidata) by traversing multi-hop neighborhoods around seed entities. It produces (subject, predicate, object) triples that form the subgraph surrounding each entity.

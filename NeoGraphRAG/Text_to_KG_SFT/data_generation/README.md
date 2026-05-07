@@ -45,12 +45,12 @@ python knowledge_base_triple_extractor.py --multiple_samples --num_samples 200 -
 ```
 
 # generate_text_from_kg.py
-```bash
-python generate_text_from_kg.py --source wikidata --model deepseek-ai/DeepSeek-V3 --llm_provider deepseek --postfix "_triples.txt"
-```
+
+- `--model` — Model to use (e.g. `gpt-3.5-turbo` or `deepseek-ai/DeepSeek-V3`).
+- `--llm_provider` — LLM provider to use: `chatgpt` or `deepseek`.
 
 ```bash
-python generate_text_from_kg.py --source wikidata --model gpt-3.5-turbo --llm_provider chatgpt
+python generate_text_from_kg.py --source wikidata --model deepseek-ai/DeepSeek-V3 --llm_provider deepseek --postfix "_triples.txt"
 ```
 ## Skip Existing Flag
 ```bash

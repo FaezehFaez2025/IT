@@ -27,12 +27,6 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-# Validate dataset source
-if [[ "$DATASET_SOURCE" != "wikidata" && "$DATASET_SOURCE" != "kelm_sub" && "$DATASET_SOURCE" != "webnlg20" && "$DATASET_SOURCE" != "genwiki_hiq" ]]; then
-  echo "Error: Dataset source must be either 'wikidata', 'kelm_sub', 'webnlg20', or 'genwiki_hiq'"
-  exit 1
-fi
-
 # Step 1: Delete the data folder
 echo "Step 1: Deleting data folder..."
 rm -rf data

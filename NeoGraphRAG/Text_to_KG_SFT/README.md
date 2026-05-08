@@ -17,17 +17,21 @@ conda activate InvertiTun_env
 ```
 
 ```bash
-pip install SPARQLWrapper tqdm openai python-dotenv
+python -m pip install --upgrade pip
+```
+
+```bash
+PYTHONNOUSERSITE=1 python -m pip install SPARQLWrapper tqdm openai python-dotenv
 ```
 
 ```bash
 # Install PyTorch with CUDA support
-pip install torch==2.1.0+cu121 torchvision==0.16.0+cu121 torchaudio==2.1.0+cu121 --index-url https://download.pytorch.org/whl/cu121
+PYTHONNOUSERSITE=1 python -m pip install torch==2.1.0+cu121 torchvision==0.16.0+cu121 torchaudio==2.1.0+cu121 --index-url https://download.pytorch.org/whl/cu121
 ```
 
 ```bash
 # Install remaining packages from PyPI
-pip install deepspeed==0.15.0 accelerate==0.34.0 transformers==4.49.0 tokenizers==0.21.0 llamafactory==0.9.3 bert-score==0.3.13 peft==0.15.0 trl==0.9.6 datasets==3.5.0 huggingface-hub==0.33.2 tensorboard
+PYTHONNOUSERSITE=1 python -m pip install deepspeed==0.15.0 accelerate==0.34.0 transformers==4.49.0 tokenizers==0.21.0 llamafactory==0.9.3 bert-score==0.3.13 peft==0.15.0 trl==0.9.6 datasets==3.5.0 huggingface-hub==0.33.2 tensorboard
 ```
 
 ---

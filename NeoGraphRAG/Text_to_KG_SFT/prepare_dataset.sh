@@ -16,7 +16,4 @@ python build_llama_factory_dataset.py --partition train
 echo "Step 4: Building test dataset..."
 python build_llama_factory_dataset.py --partition test
 
-echo "Step 5: Preparing data for baselines..."
-python prepare_baseline_data.py
-
 echo "Dataset preparation completed!"

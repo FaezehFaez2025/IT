@@ -6,8 +6,6 @@ This work has been accepted for publication in *Transactions on Machine Learning
 
 ---
 
-# Text-to-Knowledge Graph Fine-tuning Pipeline
-
 ## Environment Setup & Installation
 
 ```bash

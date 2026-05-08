@@ -71,16 +71,4 @@ echo "Step 8: Testing finetuned model..."
 cd "$SCRIPT_DIR/LLaMA-Factory"
 CUDA_VISIBLE_DEVICES="$GPU_ID" python infer_knowledge_graph.py --num_params 1.5B --use_finetuned
 
-# Step 9: Test original model
-echo "Step 9: Testing original model..."
-CUDA_VISIBLE_DEVICES="$GPU_ID" python infer_knowledge_graph.py --num_params 1.5B
-
-# Step 10: Compute BERT score for finetuned model
-echo "Step 10: Computing BERT score for finetuned model..."
-python compute_bert_score.py --json_file results/test_predictions_finetuned_1.5B.json
-
-# Step 11: Compute BERT score for original model
-echo "Step 11: Computing BERT score for original model..."
-python compute_bert_score.py --json_file results/test_predictions_original_1.5B.json
-
 echo "Pipeline completed!" 

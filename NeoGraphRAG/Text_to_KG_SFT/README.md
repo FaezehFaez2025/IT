@@ -100,20 +100,6 @@ python convert_data_to_comparable_format.py
 - `--output_dir` or `-o`: Directory to save the output file (default: `../../result/controlled_extraction/test`).
 - `filename`: Name of the JSON file in the `LLaMA-Factory/results/` directory (default: `test_predictions_finetuned_1.5B_improved.json`).
 
-# detect_and_remove_empty_lines.py
-
-## Description
-This script handles cases where some baselines (like GraphRAG) fail to generate answers for certain data samples, particularly in datasets like KELM where input texts might be too short. It:
-1. Creates a backup of all aggregated triplet files in an `original_prediction` directory (only if it doesn't already exist)
-2. Identifies line numbers where any baseline has failed to generate an answer (indicated by empty `[]` entries)
-3. Removes those lines from all aggregated files to ensure fair comparison across all baselines
-4. This ensures that the evaluation is performed only on samples where all baselines successfully generated answers
-
-## Command to Run
-```bash
-python detect_and_remove_empty_lines.py
-```
-
 # analyze_dataset_stats.py
 
 ## Description

@@ -69,13 +69,8 @@ This script converts the dataset.jsonl files into the format required by LLaMA-F
 
 ## Command to Run
 ```bash
-# For training data:
+# For training data (use --partition test for test data):
 python build_llama_factory_dataset.py --partition train
-```
-
-```bash
-# For test data:
-python build_llama_factory_dataset.py --partition test
 ```
 - `--partition`: Specifies which data partition to process (`train` or `test`).
 

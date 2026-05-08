@@ -68,8 +68,10 @@ This script converts the dataset.jsonl files into the format required by LLaMA-F
 3. Saves the processed data as `T2G_train.json` or `T2G_test.json` in the `LLaMA-Factory/data` directory.
 
 ## Command to Run
+
+Example with the `train` partition; for test data, pass `--partition test` instead.
+
 ```bash
-# For training data (use --partition test for test data):
 python build_llama_factory_dataset.py --partition train
 ```
 - `--partition`: Specifies which data partition to process (`train` or `test`).

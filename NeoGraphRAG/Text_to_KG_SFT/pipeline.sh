@@ -21,25 +21,7 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-# Step 1: Delete the data folder
-echo "Step 1: Deleting data folder..."
-rm -rf data
-
-# Step 2: Prepare data
-echo "Step 2: Preparing data..."
-python prepare_data.py --data_folder ./data_generation/data --source wikidata --train_ratio 0.8 --triples_postfix "_triples.txt" --num_samples 1000
-
-# Step 3: Build training dataset
-echo "Step 3: Building training dataset..."
-python build_llama_factory_dataset.py --partition train
-
-# Step 4: Build test dataset
-echo "Step 4: Building test dataset..."
-python build_llama_factory_dataset.py --partition test
-
-# Step 5: Prepare data for baselines
-echo "Step 5: Preparing data for baselines..."
-python prepare_baseline_data.py
+"$SCRIPT_DIR/prepare_dataset.sh" || exit 1
 
 # Step 6: Remove saves folder in LLaMA-Factory
 echo "Step 6: Removing saves folder in LLaMA-Factory..."

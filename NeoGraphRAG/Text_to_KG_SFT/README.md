@@ -1,3 +1,11 @@
+# InvertiTune
+
+This is the official repository for the [InvertiTune](https://arxiv.org/pdf/2512.03197) paper.
+
+This work has been accepted for publication in *Transactions on Machine Learning Research* (TMLR).
+
+---
+
 # Text-to-Knowledge Graph Fine-tuning Pipeline
 
 ## Environment Setup & Installation

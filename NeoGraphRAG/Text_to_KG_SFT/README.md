@@ -34,9 +34,6 @@ pip install deepspeed==0.15.0 accelerate==0.34.0 transformers==4.49.0 tokenizers
 
 # pipeline.sh
 
-## Description
-This script automates the entire pipeline for fine-tuning and evaluating the model. It handles data preparation, model training, and evaluation in a single run.
-
 ## Commands to Run
 
 ### Default Dataset (Wikidata) with Default GPU (GPU 0)

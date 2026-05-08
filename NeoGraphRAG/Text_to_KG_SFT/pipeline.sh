@@ -4,18 +4,12 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$SCRIPT_DIR"
 
-# Default dataset source
-DATASET_SOURCE="wikidata"
 # Default GPU
 GPU_ID="0"
 
 # Parse command line arguments
 while [[ $# -gt 0 ]]; do
   case $1 in
-    --dataset)
-      DATASET_SOURCE="$2"
-      shift 2
-      ;;
     --gpu)
       GPU_ID="$2"
       shift 2
@@ -33,11 +27,7 @@ rm -rf data
 
 # Step 2: Prepare data
 echo "Step 2: Preparing data..."
-if [[ "$DATASET_SOURCE" == "wikidata" ]]; then
-    python prepare_data.py --data_folder ./data_generation/data --source wikidata --train_ratio 0.8 --triples_postfix "_triples.txt" --num_samples 1000
-else
-    python prepare_data.py --source "$DATASET_SOURCE"
-fi
+python prepare_data.py --data_folder ./data_generation/data --source wikidata --train_ratio 0.8 --triples_postfix "_triples.txt" --num_samples 1000
 
 # Step 3: Build training dataset
 echo "Step 3: Building training dataset..."
